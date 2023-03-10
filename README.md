@@ -2,7 +2,7 @@
 
 ```tf
 module "s3_sync" {
-  source = "git::https://github.com/raphaeljoie/terraform-aws-s3-sync.git?ref=v0.1.1"
+  source = "git::https://github.com/raphaeljoie/terraform-aws-s3-sync.git?ref=v0.1.3"
 
   bucket = "test-bucket"
   dir_path = "./sources"
@@ -41,6 +41,7 @@ No modules.
 | <a name="input_bucket"></a> [bucket](#input\_bucket) | bucket name | `string` | n/a | yes |
 | <a name="input_create_bucket"></a> [create\_bucket](#input\_create\_bucket) | Create bucket, or import an existing one | `bool` | `true` | no |
 | <a name="input_dir_path"></a> [dir\_path](#input\_dir\_path) | path to the directory to sync | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags to be applied to all the resources | `map(string)` | `{}` | no |
 
 ## Outputs
 

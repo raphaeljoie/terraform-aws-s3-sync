@@ -82,6 +82,8 @@ resource "aws_s3_bucket" "this" {
   count = var.create_bucket ? 1 : 0
 
   bucket = var.bucket
+
+  tags = var.tags
 }
 
 resource "aws_s3_object" "those" {
@@ -94,5 +96,7 @@ resource "aws_s3_object" "those" {
   # etag makes the file update when it changes; see https://stackoverflow.com/questions/56107258/terraform-upload-file-to-s3-on-every-apply
   etag   = filemd5("${var.dir_path}/${each.value}")
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", "${each.value}"), null)
+
+  tags = var.tags
 }
 
