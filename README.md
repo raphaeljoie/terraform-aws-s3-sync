@@ -2,7 +2,7 @@
 
 ```tf
 module "s3_sync" {
-  source = "git::https://github.com/raphaeljoie/terraform-aws-s3-sync.git?ref=v0.1.3"
+  source = "git::https://github.com/raphaeljoie/terraform-aws-s3-sync.git?ref=v0.1.1"
 
   bucket = "test-bucket"
   dir_path = "./sources"
@@ -31,7 +31,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_s3_bucket.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
-| [aws_s3_object.dist](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object) | resource |
+| [aws_s3_object.those](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object) | resource |
 | [aws_s3_bucket.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/s3_bucket) | data source |
 
 ## Inputs
